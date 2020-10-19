@@ -2,9 +2,11 @@ const fetch = require('node-fetch');
 
 export default async function(req, res) {
   // Hacky cors solution
-  if (req.method === 'OPTIONS') {
-		return res.status(200).end();
-  }
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version');
+
   
 	const user = req.query.user;
 	// Fetch info from lastfm
