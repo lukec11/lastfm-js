@@ -11,7 +11,7 @@
     "url": "git+https://github.com/lukec11/lastfm-js.git"
   },
   "author": "",
-  "license": "",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/lukec11/lastfm-js/issues"
   },
