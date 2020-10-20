@@ -17,7 +17,7 @@ export default async function(req, res) {
 	resp = await resp.json();
 
 	// Parse out song
-	let song = resp.recenttracks.track[0];
+	const song = resp.recenttracks.track[0];
 
 	// send formatted response
 	res.json({
